@@ -1,26 +1,65 @@
-@import "tailwindcss";
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+body {
+    background: linear-gradient(90deg, #FCBA03 0%, #ff8102 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15rem;
+    max-width: 91%;
+    margin:0 auto;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.quote-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color:#faff72;
+  position: relative;
+  border-radius: 8px;
+  margin:0 auto;
+  background-image: url("https://media.istockphoto.com/id/1405644845/vector/vector-writing-pattern-writing-seamless-background.jpg?s=612x612&w=0&k=20&c=wwkbZDH6HAwkghWWm8vSOSVaRVnaZDIZCPEouqibzvY=");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.quote-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.quote-bar > *{
+    z-index: 1;
+    position: relative;
+}
+
+.btn-style {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff126;
+  color: #333;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: #ff1100 0px 4px 6px -1px, #ff1100 0px 2px 4px -1px;
+}
+
+.h3-style{
+    margin-bottom: 0.5rem;
+    color: #333;
 }
